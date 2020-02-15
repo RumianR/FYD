@@ -144,6 +144,7 @@
 
     // creating the canvas
     c = document.createElement('canvas')
+    c.style.borderRadius = '40px'
     isC = !!(c.getContext && c.getContext('2d'))
     if (w && h && isC) cc = createContainer(w, h, el, altText, options)
 
@@ -169,7 +170,7 @@
         if (!playing) {
           playing = true
           gif = document.createElement('IMG')
-          gif.setAttribute('style', 'width:100%;height:100%;')
+          gif.setAttribute('style', 'width:100%;height:100%; border-radius: 40px;')
           gif.setAttribute('data-uri', Math.floor(Math.random() * 100000) + 1)
           setTimeout(function() {
             gif.src = url
@@ -208,7 +209,7 @@
           dims.w +
           'px;height:' +
           dims.h +
-          'px;background:none;border:none;padding:0;'
+          'px;background:none;border:none;padding:0; border-radius: 40px;'
       )
 
       c.style.width = '100%'
